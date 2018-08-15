@@ -1,12 +1,1 @@
-{
-  "type": "service_account",
-  "project_id": "voltaic-inn-210517",
-  "private_key_id": "8cbcda9cde44fab08836a8882e03e893d8fe88c7",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCFGrIb2FPtU1m5\nlAJhTFyEh5zcNCqX/bl47f63DJmqeWhtssn10n/DisjNuB6GmilRmes5zR5Q7R1G\ns/1PHuFwVEmVt1wDUsSIIUoiPH3nkqrUv8vUrh9OmwplmHV0llxUQlfNMJhW8+zT\nDmejEyofUvfBmc21KcWBASsPkVHXFU3B+9i/658ufCy6d41AiGlymwEOEq32nv7i\n0h5xaK1Fy0wk4qLthM/7KiQiq9H75xYEPIfKhqllmuadd73oQ4BkbOPh/4c50Rg9\nUzjeU1Gy2we6JKw+C+xdp2VjzrAqqfJAWXsCXJ1SzrBLZq7XKNFn4N/GhNCzJ7QF\nKnfX3pOpAgMBAAECggEAAXWmTRgPl6dDCiGTPbel93Wv2TntRc98W3FwxsIAvTUH\n61VAnI8fZ0putncfjcrHVi9j40ON+5dyRFYIaM1MWHqH6fvOPGZCkvqheQWb4FXN\nE0o+2YZ8VTTKR5OsV38Zb1cn9KETKel9NGcdGryWk54bh2AUX7XKmBRfL5t5duxL\nn9IUrXbOKLXizfQ205Dj9ddHRZmzP+ObKh9/ZTBxb3E6oDijVXzkjuTxtqrpXFlf\nOVp559vYwblND9beQE7MJsT+jvjgTNdAo1dC2fcxjIxZGXA2JjAWa+hmGHlkBr4P\npj2UO4+S4VwgGQNfVsMAk1CxoPPQCf0FwpiUI+ApQQKBgQC7v5z256cDgo5YyvI4\nOz0ukJix385xoIQ7qTfca/FIPAf2BfC36SfkNSmjIyE0BE4I47mwb3YKfAY67DiB\ndbIyJL3f6WfJPeJVlLotjZxR1MPGuI9OQEnUjq8OmO4DEkecBv8iQn57YKup69mk\n3hb1/PiClyV3kKAvuxLAfWADwQKBgQC1fb5OSyLMHz/yUi2Eef499j5VBbyHaHT0\n7OhWlgL4NqmmOCSL1g60NZj7oya56rsFCqaeVv4EN7derHU+6Hg8d92GMSqRIvmC\nTXDdt54Is6mxV3sGaAai/ndOZvZTjAk9nIio/4ClMBe63n7Rahpo9lE1EBrsBhBp\nFJA5IjFp6QKBgBuEILgbCWI9Tyl6TPeqzvO1I3vmRjZnBRpNWa+Hbmxcx/npsvbx\nR/RtSjXrnyElhF5PKdbO7yjoNm2KU1m96yjoM5/OcHSRCkvqqUKl34Qqv6qvP+mD\nCI8LfmKQTUnL8wzOBbR6tFjWuTIFK/e6yPiyY6WYC1izrJZyP3RQq7LBAoGANWZ5\nHypGY87yDseVMvx+DRcuAfA9J45Zk1M9jXR4DTZwNkMgpbBnBSkcCTZZB60EOBiJ\nK9+mv/Dw2D9gBBF8hzYxjPFcd/XVejx08Be9vQu360E1Jo5nHYBH9F6hLbXvZhxv\nrWH4JSKAaPBcWhuhB68p97X0Zevm2jQ9t0HTTjkCgYAVwp2qu9IPJHXCM6gDN3ca\n8tAH9aycAvp3Ssupc4I5R0pJTsaX+EXqUSJg6GKDbU9ofTMjc1LWBpVMVyIa2NbY\nJqgKW85ue9Pr56RIqQiZfuMB/Q20eMnKZgL13nz+1/no4Ovu3g+y29lhRx1ViuDV\n/UFuXvLBxJAcGFTxeIDvlg==\n-----END PRIVATE KEY-----\n",
-  "client_email": "upload@voltaic-inn-210517.iam.gserviceaccount.com",
-  "client_id": "117545716908044790887",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://accounts.google.com/o/oauth2/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/upload%40voltaic-inn-210517.iam.gserviceaccount.com"
-}
+
