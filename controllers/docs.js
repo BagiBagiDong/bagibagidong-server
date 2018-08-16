@@ -21,6 +21,20 @@ const addDoc = (req, res)=> {
   })
 }
 
+const listAllDocs = (req, res) => {
+  Doc.find({})
+  .then(docs => {
+    if(docs){
+      res.status(200).json({docs, message: `here's your docs`})
+    } else {
+      res.status(200).json({message: `you haven't created any doc`})
+    }
+  })
+  .catch(err =>{
+    res.status(500).json({message: err});
+  })
+}
+
 
 
 module.exports = {
