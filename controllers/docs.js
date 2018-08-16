@@ -35,6 +35,20 @@ const listAllDocs = (req, res) => {
   })
 }
 
+const updateDoc = (req, res) => {
+
+  Doc.findByIdAndUpdate(req.params.id, req.body)
+  .then(updatedDoc => {
+    res.status(201).json({
+      updatedDoc,
+      message: 'doc updated'
+    })
+  })
+  .catch(err=> {
+    res.status(500).json({message: err});
+  })
+}
+
 
 
 module.exports = {
