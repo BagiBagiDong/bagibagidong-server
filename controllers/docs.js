@@ -49,7 +49,18 @@ const updateDoc = (req, res) => {
   })
 }
 
-
+const deleteDoc = (req, res) => {
+  Doc.findByIdAndDelete(req.params.id)
+  .then(deletedDoc => {
+    res.status(200).json({
+      deletedDoc, 
+      message: 'doc deleted'
+    })
+  })
+  .catch(err => {
+    res.status(500).json({message: err});
+  })
+}
 
 module.exports = {
   addDoc,
