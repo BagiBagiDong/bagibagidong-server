@@ -4,25 +4,32 @@ const loggedInUser = jwt.verify(req.body.token, process.env.tokenSecretKey)
 const addDoc = (req, res)=> {
   const {docName, url, collaborators} = req.body
 
-  Doc.create({
-    user: loggedInUser._id,
-    docName, 
-    url, 
-    collaborators
+  Doc.find({
+    name: collaborators
   })
-  .then(createdDoc => {
-    res.status(201).json({
-      createdDoc, 
-      message:'doc added'
+  .then(user => {
+    return Doc.create({
+      user: loggedInUser._id,
+      docName, 
+      url, 
+      collaborators: user._id
     })
-    .catch(err => {
-      res.status(500).json({message: err});
+    .then(createdDoc => {
+      res.status(201).json({
+        createdDoc, 
+        message:'doc added'
+      })
     })
+  })
+  .catch(err => {
+    res.status(500).json({message: err});
   })
 }
 
 const listAllDocs = (req, res) => {
   Doc.find({})
+  .populate('user')
+  .populate('collaborators')
   .then(docs => {
     if(docs){
       res.status(200).json({docs, message: `here's your docs`})
