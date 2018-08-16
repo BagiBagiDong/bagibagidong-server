@@ -1,29 +1,31 @@
 const Doc = require('../models/doc');
-const loggedInUser = jwt.verify(req.body.token, process.env.tokenSecretKey)
+const jwt = require('jsonwebtoken');
 
 const addDoc = (req, res)=> {
+  // const loggedInUser = jwt.verify(req.body.token, process.env.tokenSecretKey)
   const {docName, url, collaborators} = req.body
 
-  Doc.find({
-    name: collaborators
+  Doc.create({
+    // user: loggedInUser._id,
+    docName, 
+    url,
   })
-  .then(user => {
-    return Doc.create({
-      user: loggedInUser._id,
-      docName, 
-      url, 
-      collaborators: user._id
-    })
-    .then(createdDoc => {
-      res.status(201).json({
-        createdDoc, 
-        message:'doc added'
-      })
+  .then(createdDoc => {
+    res.status(201).json({
+      createdDoc, 
+      message:'doc added'
     })
   })
   .catch(err => {
     res.status(500).json({message: err});
   })
+
+  // PersonModel.update(
+  //   { _id: person._id }, 
+  //   { $push: { friends: friend } },
+  //   done
+  // );
+
 }
 
 const listAllDocs = (req, res) => {
@@ -43,7 +45,6 @@ const listAllDocs = (req, res) => {
 }
 
 const updateDoc = (req, res) => {
-
   Doc.findByIdAndUpdate(req.params.id, req.body)
   .then(updatedDoc => {
     res.status(201).json({

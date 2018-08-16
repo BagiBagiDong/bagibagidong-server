@@ -25,7 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //mongoose connection
-mongoose.connect(`mongodb://${process.env.dbUser}:${process.env.dbPassword}@ds121382.mlab.com:21382/bagibagidong-db-admin123`, { useNewUrlParser: true });
+mongoose.connect(`mongodb://${process.env.dbUser}:${process.env.dbPassword}@ds113442.mlab.com:13442/hacktiv8`, { useNewUrlParser: true });
+
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));

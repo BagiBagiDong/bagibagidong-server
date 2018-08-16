@@ -17,7 +17,10 @@ const docSchema = new Schema({
    collaborators: [{
      type: Schema.Types.ObjectId,
      ref: 'User'
-   }]
+   }],
+   docZohoId:{
+     type: String
+   }
 }, {timestamps: true})
 
 const Doc = mongoose.model('Doc', docSchema);
