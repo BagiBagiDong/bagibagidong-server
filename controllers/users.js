@@ -4,12 +4,20 @@ const get = function(req, res){
     User
     .find()
     .then(function(user){
+        if (user) {
+            res
+            .status(200)
+            .json({
+                msg : "user(s) found",
+                user : user 
+            })
+        }
         res
-        .status(200)
-        .json({
-            msg : "belom ada user",
-            user : user 
-        })
+            .status(404)
+            .json({
+                msg : "there isnt any user",
+                user : user 
+            })
     })
     .catch(function(err){
         res

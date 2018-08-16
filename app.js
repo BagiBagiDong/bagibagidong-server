@@ -7,7 +7,8 @@ var logger = require('morgan');
 const mongoose = require('mongoose')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const authRouter = require('./routes/auth')
+const authRouter = require('./routes/auth');
+const docsRouter = require('./routes/docs');
 var app = express();
 app.use(require('cors')())
 
@@ -24,7 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //mongoose connection
-mongoose.connect(`mongodb://${process.env.dbUser}:${process.env.dbPassword}@ds121382.mlab.com:21382/bagibagidong-db-admin123`, { useNewUrlParser: true });
+mongoose.connect(`mongodb://${process.env.dbUser}:${process.env.dbPassword}@ds113442.mlab.com:13442/hacktiv8`, { useNewUrlParser: true });
+
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -37,6 +39,7 @@ db.once('open', function() {
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);
+app.use('/docs', docsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

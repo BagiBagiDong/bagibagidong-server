@@ -17,7 +17,7 @@ const login = function(req,res){
             user
             .comparePassword(password, function(err, isMatch){  
                 if(isMatch){
-                    var token = jwt.sign({ id:user.id, name:user.name, email:user.email }, process.env.tokenSecretKey);
+                    var token = jwt.sign({ id:user._id, name:user.name, email:user.email }, process.env.tokenSecretKey);
                     console.log("dari server token :", token )
                     res
                         .status(200)
@@ -63,7 +63,7 @@ loginFacebook = function(req,res){
                     console.log(user)
                     if(user){
                         console.log("ada user nya", user)
-                        var token = jwt.sign({ id:user.id, name:user.name, email:user.email }, process.env.tokenSecretKey);
+                        var token = jwt.sign({ id:user._id, name:user.name, email:user.email }, process.env.tokenSecretKey);
         
                         console.log("dari server token (ada user):", token )
                         res
@@ -80,7 +80,7 @@ loginFacebook = function(req,res){
                             password:password,
                         })
                         .then(function(user){
-                            var token = jwt.sign({ id:user.id, name:user.name, email:user.email }, process.env.tokenSecretKey);
+                            var token = jwt.sign({ id:user._id, name:user.name, email:user.email }, process.env.tokenSecretKey);
                             console.log("dari server token (user baru):", token )
                             res
                                 .status(200)
