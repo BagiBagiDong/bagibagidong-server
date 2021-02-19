@@ -11,7 +11,6 @@ const authRouter = require('./routes/auth');
 const docsRouter = require('./routes/docs');
 var app = express();
 app.use(require('cors')())
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
